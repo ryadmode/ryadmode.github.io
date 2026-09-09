@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荔枝漫画-荔枝漫画在线观看与漫画推荐指南</title>
+    <meta name="description" content="荔枝漫画是一个专注于提供丰富漫画资源的阅读平台，涵盖日漫、国漫、韩漫等多种类型。本指南介绍荔枝漫画的特点、如何使用、阅读技巧以及常见问题，帮助漫画爱好者找到心仪的作品。">
+    <meta name="keywords" content="荔枝漫画,漫画阅读,在线漫画,国漫,日漫,韩漫,漫画推荐,荔枝漫画官网">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f8f4f0;
+            color: #2d2a26;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .site-header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            padding: 16px 0;
+            box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .brand-text {
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            background-color: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%);
+            padding: 60px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '📖';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.06;
+            top: -30px;
+            right: -20px;
+            transform: rotate(15deg);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: #d63031;
+            margin-bottom: 16px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #6d5d5b;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-tag {
+            background: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            color: #e17055;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+
+        .hero-tag:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Section Common */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2d2a26;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #ffa502);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #f0e6e0;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            border-color: #ffb8a0;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #d63031;
+        }
+
+        .feature-card p {
+            color: #636e72;
+            font-size: 0.95rem;
+        }
+
+        /* Content Area */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.06);
+        }
+
+        .content-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2d2a26;
+            border-left: 5px solid #ff6b6b;
+            padding-left: 15px;
+        }
+
+        .content-text p {
+            margin-bottom: 15px;
+            color: #4a4a4a;
+        }
+
+        .content-text ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .content-text ul li {
+            padding: 8px 0 8px 30px;
+            position: relative;
+            color: #555;
+        }
+
+        .content-text ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .content-image {
+            text-align: center;
+            font-size: 8rem;
+            line-height: 1;
+            background: linear-gradient(135deg, #fff0e8, #ffe0d0);
+            border-radius: 16px;
+            padding: 40px 20px;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Steps Section */
+        .steps-section {
+            background: #fff;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            counter-reset: step;
+        }
+
+        .step-item {
+            background: #fdf8f5;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #f0e0d8;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .step-item:hover {
+            background: #fff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .step-item::before {
+            counter-increment: step;
+            content: counter(step);
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+
+        .step-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2d2a26;
+        }
+
+        .step-item p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        /* Categories */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            transition: all 0.3s;
+            border: 1px solid #f0e6e0;
+            cursor: default;
+        }
+
+        .category-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            border-color: #ffb0a0;
+        }
+
+        .category-card .cat-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .category-card h3 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .category-card p {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: #fdf8f5;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            overflow: hidden;
+            border: 1px solid #f0e6e0;
+        }
+
+        .faq-question {
+            padding: 20px 25px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #2d2a26;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: #fff5f0;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            font-weight: 300;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #636e72;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .faq-item.open .faq-answer {
+            padding: 0 25px 20px;
+            max-height: 300px;
+        }
+
+        /* Tips Box */
+        .tips-box {
+            background: linear-gradient(135deg, #fff3ed, #ffe8df);
+            border-radius: 16px;
+            padding: 30px;
+            border-left: 6px solid #ff6b6b;
+            margin: 40px 0;
+        }
+
+        .tips-box h3 {
+            color: #d63031;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .tips-box p {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #2d2a26;
+            color: #aaa;
+            padding: 40px 0 30px;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: #888;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav a:hover {
+            color: #ff6b6b;
+        }
+
+        .copyright {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+            
+            .content-image {
+                min-height: 200px;
+                font-size: 6rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .main-nav ul {
+                justify-content: center;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .content-grid {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero {
+                padding: 40px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            
+            .feature-card {
+                padding: 20px;
+            }
+            
+            .step-item {
+                padding: 20px 15px;
+            }
+            
+            .faq-question {
+                font-size: 0.95rem;
+                padding: 15px 18px;
+            }
+            
+            .faq-answer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="brand">
+                <span class="brand-icon">🍒</span>
+                <span class="brand-text">荔枝漫画</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#features" class="active">平台特色</a></li>
+                    <li><a href="#guide">阅读指南</a></li>
+                    <li><a href="#categories">漫画分类</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#tips">阅读贴士</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>荔枝漫画</h1>
+                <p>荔枝漫画是一个汇集了海量优质漫画的在线阅读平台，无论你是喜欢热血日漫、唯美国漫，还是剧情紧凑的韩漫，都能在这里找到心仪的作品。随时随地，开启你的漫画之旅。</p>
+                <div class="hero-tags">
+                    <span class="hero-tag">🔥 每日更新</span>
+                    <span class="hero-tag">📚 超全分类</span>
+                    <span class="hero-tag">💬 社区互动</span>
+                    <span class="hero-tag">📱 多端同步</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section" id="features">
+            <div class="container">
+                <h2 class="section-title">为什么选择荔枝漫画</h2>
+                <p class="section-subtitle">一个让漫画爱好者流连忘返的阅读空间</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">🎨</span>
+                        <h3>高清画质</h3>
+                        <p>平台提供高清漫画图片，细节清晰呈现，带来沉浸式阅读体验，让每一格画面都精彩纷呈。</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">⚡</span>
+                        <h3>极速加载</h3>
+                        <p>优化的图片加载技术，减少等待时间，翻页流畅不卡顿，畅享丝滑阅读感受。</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">📖</span>
+                        <h3>海量资源</h3>
+                        <p>涵盖多种题材与风格，从经典到新番，从少年热血到少女恋爱，总有一款适合你。</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔖</span>
+                        <h3>个性书架</h3>
+                        <p>支持收藏、追更和阅读记录功能，打造专属漫画书架，不错过任何一部作品的更新。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section class="section" id="guide" style="background: #fff;">
+            <div class="container">
+                <h2 class="section-title">荔枝漫画阅读指南</h2>
+                <p class="section-subtitle">从入门到精通，快速上手使用</p>
+                
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h2>如何开始使用</h2>
+                        <p>使用荔枝漫画非常简单，无论是通过网页端还是移动端，都能快速找到你想看的漫画。平台界面设计直观，功能布局清晰，即使是初次接触的读者也能轻松上手。</p>
+                        <p>主要使用流程包括：</p>
+                        <ul>
+                            <li>浏览首页推荐或搜索感兴趣的作品</li>
+                            <li>进入漫画详情页查看简介与目录</li>
+                            <li>点击开始阅读，支持上下滚动或左右翻页</li>
+                            <li>收藏作品并开启更新提醒</li>
+                            <li>参与评论区和同好交流心得</li>
+                        </ul>
+                        <p>平台还支持深色模式、字体调节等个性化设置，满足不同读者的阅读习惯。</p>
+                    </div>
+                    <div class="content-image">
+                        🍒
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps Section -->
+        <section class="section steps-section">
+            <div class="container">
+                <h2 class="section-title">三步开启你的漫画之旅</h2>
+                <p class="section-subtitle">简单快捷，随时随地享受阅读</p>
+                
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <h3>注册账号</h3>
+                        <p>使用手机号或邮箱快速注册，同步阅读记录与收藏。</p>
+                    </div>
+                    <div class="step-item">
+                        <h3>发现作品</h3>
+                        <p>通过分类、榜单或搜索功能，找到你感兴趣的漫画。</p>
+                    </div>
+                    <div class="step-item">
+                        <h3>开启阅读</h3>
+                        <p>点击开始阅读，享受高清流畅的漫画内容，支持离线缓存。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="section" id="categories" style="background: #fdf8f5;">
+            <div class="container">
+                <h2 class="section-title">热门漫画分类</h2>
+                <p class="section-subtitle">探索不同风格与题材的精彩世界</p>
+                
+                <div class="category-grid">
+                    <div class="category-card">
+                        <span class="cat-icon">⚔️</span>
+                        <h3>热血少年</h3>
+                        <p>冒险、战斗、成长</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">💕</span>
+                        <h3>少女恋爱</h3>
+                        <p>甜蜜、校园、浪漫</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">👾</span>
+                        <h3>科幻奇幻</h3>
+                        <p>异世界、未来、魔法</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">🕵️</span>
+                        <h3>悬疑推理</h3>
+                        <p>烧脑、案件、解密</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">😄</span>
+                        <h3>轻松搞笑</h3>
+                        <p>日常、吐槽、治愈</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">🏀</span>
+                        <h3>运动竞技</h3>
+                        <p>篮球、足球、拼搏</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">🍜</span>
+                        <h3>美食生活</h3>
+                        <p>美食、日常、温暖</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">🐉</span>
+                        <h3>古风仙侠</h3>
+                        <p>武侠、修仙、国风</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">🤖</span>
+                        <h3>机甲科幻</h3>
+                        <p>机器人、未来战争</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">👻</span>
+                        <h3>恐怖惊悚</h3>
+                        <p>灵异、心理、悬疑</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">👶</span>
+                        <h3>萌系治愈</h3>
+                        <p>可爱、温馨、放松</p>
+                    </div>
+                    <div class="category-card">
+                        <span class="cat-icon">🎭</span>
+                        <h3>剧情深度</h3>
+                        <p>现实、人性、思考</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="section" id="tips">
+            <div class="container">
+                <div class="tips-box">
+                    <h3>💡 阅读小贴士</h3>
+                    <p>• 利用「追更」功能，第一时间获取更新通知，不错过最新章节。</p>
+                    <p>• 使用「离线缓存」功能，在无网络环境下也能继续阅读。</p>
+                    <p>• 善用「搜索」与「标签筛选」功能，快速精准找到目标作品。</p>
+                    <p>• 在评论区留下你的感想，与其他读者交流互动，发现更多好作品。</p>
+                    <p>• 定期查看「编辑推荐」和「排行榜」，了解近期热门佳作。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-subtitle">关于荔枝漫画，你可能想了解这些</p>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">荔枝漫画是免费的吗？</div>
+                        <div class="faq-answer">荔枝漫画提供大量免费漫画供用户阅读，同时部分热门或最新连载作品可能需要使用平台积分或会员进行解锁。具体收费模式以平台实际规则为准，建议阅读前查看作品页面的说明。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">支持在哪些设备上使用？</div>
+                        <div class="faq-answer">荔枝漫画支持网页浏览器直接访问，同时也提供移动端适配页面，在手机和平板上都能获得良好的阅读体验。阅读记录与收藏会同步至你的账号，方便在不同设备间切换。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何找到我喜欢的漫画类型？</div>
+                        <div class="faq-answer">你可以通过首页的「分类」导航浏览不同题材的漫画，也可以使用搜索框输入作品名称或作者进行查找。此外，平台还会根据你的阅读历史进行个性化推荐。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">漫画多久更新一次？</div>
+                        <div class="faq-answer">更新频率取决于漫画原作者和授权方的进度。通常热门连载作品会定期更新（如每周或每两周），平台会及时同步最新章节。你可以在作品详情页查看预计的更新时间。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">遇到加载问题或图片显示异常怎么办？</div>
+                        <div class="faq-answer">首先建议检查网络连接，尝试刷新页面。若问题持续，可尝试清除浏览器缓存或更换其他浏览器。如仍无法解决，可通过平台的反馈渠道联系客服处理。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">是否可以下载漫画离线阅读？</div>
+                        <div class="faq-answer">部分作品支持离线缓存功能，允许用户在联网时下载已解锁的章节，然后在无网络环境下阅读。具体是否支持以及缓存规则，请以作品页面和平台功能为准。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-brand">🍒 荔枝漫画</div>
+            <p class="footer-text">海量漫画资源 · 高清流畅阅读 · 随时随地享受漫画乐趣</p>
+            <nav class="footer-nav">
+                <a href="#">关于我们</a>
+                <a href="#">帮助中心</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系我们</a>
+            </nav>
+            <div class="copyright">
+                <p>本站所有漫画内容均为虚构示例，仅供页面展示与功能演示使用。</p>
+                <p style="margin-top: 8px;">© 2025 荔枝漫画页面演示 - 请支持正版漫画</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', function() {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('open')) {
+                            otherItem.classList.remove('open');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+
+</body>
+  </html>
